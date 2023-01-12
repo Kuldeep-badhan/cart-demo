@@ -1,0 +1,53 @@
+/*git branch -m main master
+git fetch origin
+git branch -u origin/master master
+git remote set-head origin -a*/
+
+@media screen and (max-width: 1000px) {
+  // For Cart
+  .cart {
+    grid-template-columns: 1fr;
+    > aside {
+      align-items: center;
+      border-top: 10px solid rgb(18, 18, 18);
+      border-left: none;
+    }
+  }
+  .cart-item {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 0.5fr 0.3fr;
+    > .img-price {
+      justify-content: center;
+    }
+    > .del-icon {
+      justify-self: end;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .home {
+    flex-direction: column;
+  }
+  .cart {
+    grid-template-columns: 1fr;
+    > main {
+      overflow-y: unset;
+    }
+    > aside {
+      align-items: center;
+      border-top: 10px solid rgb(18, 18, 18);
+      border-left: none;
+    }
+    > .cart-item {
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 0.5fr 0.3fr;
+      > .img-price {
+        justify-content: center;
+      }
+      > .del-icon {
+        justify-self: center;
+      }
+    }
+  }
+}

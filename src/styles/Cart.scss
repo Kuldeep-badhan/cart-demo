@@ -1,0 +1,82 @@
+@import "global";
+
+.cart {
+    height: 100vh;
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+  > main {
+    overflow-y: auto;
+    >h1{
+      color: $tertiary;
+     text-align: center;
+    }
+  }
+  > aside {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+    color: $tertiary;
+    border-left: 10px solid $primarydark;
+    border-radius: 15%;
+    height: 100%;
+    padding: 2rem;
+    > h2 {
+        font-weight: 300;
+        padding: 1rem;
+        &:last-of-type{
+
+            font-weight: 500;
+        }
+    }
+   
+  }
+}
+.cart-item {
+  display: grid;
+  grid-template-columns: 2fr 3fr 1fr 1fr;
+  background: $tertiary;
+  margin: 2rem ;
+  padding: 1rem;
+  border-radius: 1rem;
+  > .img-price {
+    display: flex;
+    > img {
+      height: 100px;
+      width: 100px;
+    }
+    > article {
+      align-self: center;
+    }
+  }
+  > .cartqtyUpdater {
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    > button {
+      height: 22px;
+      width: 22px;
+      border: none;
+      background: $primary;
+      color: $tertiary;
+      border-radius: 0.2rem;
+      margin: 0.2rem;
+      transition: all 0.3s;
+      cursor: pointer;
+
+      &:hover {
+        background-color: $primarydark;
+      }
+    }
+  }
+  > .del-icon {
+    align-self: center;
+    font-size: 1.3rem;
+    transition: all 0.2s;
+    cursor: pointer;
+    justify-self: end;
+    &:hover {
+        color: $secondary;
+    }
+  }
+}
